@@ -5,6 +5,8 @@ import com.ttianjun.bean.Order;
 import com.ttianjun.service.OrderService;
 import com.ttianjun.service.StockService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
  * @date 16/1/14
  */
 
-@Component
+@Controller
 public class OrderAction {
 
     @Reference(group = "sz")
@@ -22,13 +24,20 @@ public class OrderAction {
     @Reference
     private StockService stockService;
 
-    public void list(){
+    @RequestMapping("/list")
+    public String list(){
 
         List<Order> orderList = orderService.getAll();
 
         System.out.println("orderList.size()="+orderList.size());
 
         stockService.test();
+        return "list";
+    }
+    @RequestMapping("/")
+    public String index(){
+        System.out.println("index");
+        return "index";
     }
 
 }

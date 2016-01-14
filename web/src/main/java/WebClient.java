@@ -11,7 +11,7 @@ public class WebClient {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("dubbo.xml");
         ctx.start();
 
-        OrderAction orderAction = (OrderAction) ctx.getBean("orderAction");
+        OrderAction orderAction = ctx.getBean("orderAction",OrderAction.class);
         orderAction.list();
     }
 }
