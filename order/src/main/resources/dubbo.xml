@@ -8,10 +8,15 @@
 	http://code.alibabatech.com/schema/dubbo
 	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <bean id="orderService" class="com.ttianjun.service.imp.OrderServiceImpl" />
+    <bean id="orderServicesz" class="com.ttianjun.service.imp.OrderServiceImpl" />
+    <bean id="orderServicelz" class="com.ttianjun.service.imp.OrderServiceLzn" />
+    <bean id="stockServiceLz" class="com.ttianjun.service.imp.StockServiceLz" />
+
+    <dubbo:service interface="com.ttianjun.service.OrderService" ref="orderServicesz" group="sz"/>
+    <dubbo:service interface="com.ttianjun.service.OrderService" ref="orderServicelz" group="lz"/>
+    <dubbo:service interface="com.ttianjun.service.StockService" ref="stockServiceLz"/>
 
     <dubbo:application name="order-lzbank" owner="tianjun"/>
-    <dubbo:service interface="com.ttianjun.service.OrderService" ref="orderService" token="1234567"/>
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
 </beans>

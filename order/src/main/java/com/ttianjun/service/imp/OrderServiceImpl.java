@@ -1,5 +1,6 @@
 /**
- * Created by keeley on 16/1/14.
+ * @user keeley
+ * @date 16/1/14
  */
 package com.ttianjun.service.imp;
 
@@ -12,6 +13,7 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
     public List<Order> getAll(){
+        System.out.println("OrderServiceImpl.getAll");
         List<Order> orders = new ArrayList<Order>();
         for(int i=0;i<5;i++){
             Order tmpOrder = new Order();
