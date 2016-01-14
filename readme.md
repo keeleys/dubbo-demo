@@ -22,4 +22,8 @@ conf/zoo.cfg
 
 ## dubbo-admin
 
-/file 目录里面 放到tomcat下运行
+`/file` 目录里面 放到tomcat容器下运行
+
+配置: vi webapps/ROOT/WEB-INF/dubbo.properties
+
+访问: (用户:root,密码:root 或 用户:guest,密码:guest)
