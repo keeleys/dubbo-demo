@@ -1,3 +1,9 @@
+##开始运行
+
+首先配置zookeeper 和 dubbo-admin
+运行 OrderServiceClient.main提供服务
+运行 WebClient.main 消费服务
+
 ## zookeeper
 
 下载地址
