@@ -1,9 +1,11 @@
 package com.ttianjun.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by keeley on 16/1/14.
  */
-public class Order {
+public class Order implements Serializable{
     private int id;
     private String name;
     private String no;

@@ -10,6 +10,8 @@
 
     <bean id="orderService" class="com.ttianjun.service.imp.OrderServiceImpl" />
 
-    <dubbo:service interface="com.ttianjun.service.OrderService" ref="orderService" />
+    <dubbo:application name="order-lzbank" owner="tianjun"/>
+    <dubbo:service interface="com.ttianjun.service.OrderService" ref="orderService" token="1234567"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
 </beans>
