@@ -27,3 +27,7 @@ conf/zoo.cfg
 配置: vi webapps/ROOT/WEB-INF/dubbo.properties
 
 访问: (用户:root,密码:root 或 用户:guest,密码:guest)
+
+## redis
+* `redis-demo` 添加redis+jedis+spring的demo
+
